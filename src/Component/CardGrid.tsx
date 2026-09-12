@@ -1,0 +1,40 @@
+import { use } from 'react';
+import type { CardType } from '../Type';
+import AvailableLanguage from './AvailableLanguage';
+
+interface CardGridType {
+  promise: Promise<CardType[]>
+}
+
+const CardGrid = ({ promise }: CardGridType) => {
+
+  const language = use(promise);
+  
+  return (
+  <div  className=" bg-white px-6 py-12 md:px-16 md:py-20 container mx-auto">
+  <h2 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
+    Explore the <span className="bg-linear-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Technologies</span>
+  </h2>
+  <p className="text-slate-400 text-base sm:text-lg font-normal mt-3">
+    Pick one technology per category to build your ideal stack.
+  </p>
+
+
+
+    <div className='mt-8 grid grid-cols-12 gap-6'>
+
+    <div className='col-span-12 rounded-2xl p-6 shadow-sm md:col-span-8'>
+      <AvailableLanguage language = {language}/>
+    </div>
+
+    <div className='col-span-12 rounded-2xl bg-blue-200 p-6 shadow-sm md:col-span-4'>
+      <h2 className='text-2xl font-bold text-slate-900'>ggg</h2>
+    </div>
+
+    </div>
+
+</div>
+  );
+};
+
+export default CardGrid;

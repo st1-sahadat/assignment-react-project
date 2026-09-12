@@ -1,6 +1,7 @@
-import { use } from 'react';
+import { use, useState } from 'react';
 import type { CardType } from '../Type';
 import AvailableLanguage from './AvailableLanguage';
+import LanguageCart from './LanguageCart';
 
 interface CardGridType {
   promise: Promise<CardType[]>
@@ -9,6 +10,7 @@ interface CardGridType {
 const CardGrid = ({ promise }: CardGridType) => {
 
   const language = use(promise);
+  const [selectedLan, setSelectedLan] = useState<CardType[]>([]);
   
   return (
   <div  className=" bg-white px-6 py-12 md:px-16 md:py-20 container mx-auto">
@@ -24,11 +26,11 @@ const CardGrid = ({ promise }: CardGridType) => {
     <div className='mt-8 grid grid-cols-12 gap-6'>
 
     <div className='col-span-12 rounded-2xl p-6 shadow-sm md:col-span-8'>
-      <AvailableLanguage language = {language}/>
+      <AvailableLanguage language = {language} selectedLan ={selectedLan} setSelectedLan = {setSelectedLan}/>
     </div>
 
-    <div className='col-span-12 rounded-2xl bg-blue-200 p-6 shadow-sm md:col-span-4'>
-      <h2 className='text-2xl font-bold text-slate-900'>ggg</h2>
+    <div className='col-span-12 rounded-2xl p-6 shadow-sm md:col-span-4'>
+      <LanguageCart />
     </div>
 
     </div>

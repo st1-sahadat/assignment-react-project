@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import type {CardType} from './Type'
 import Navbar from './Component/Navbar';
 import Banner from './Component/Banner';

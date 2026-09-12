@@ -1,14 +1,25 @@
+import { useState, type Dispatch, type SetStateAction } from 'react';
 import type { CardType } from '../Type';
 
 interface LanCardType{
     lanCard : CardType;
+    selectedLan : CardType[];
+    setSelectedLan : Dispatch<SetStateAction<CardType[]>>
 }
 
 
 
 
-const LanguageCard = ({lanCard} : LanCardType) => {
-    console.log(lanCard);
+const LanguageCard = ({lanCard, selectedLan, setSelectedLan} : LanCardType) => {
+
+        const [isSelected, setIsSelected] = useState(false);
+
+        const handleLan = ()=>{
+            setIsSelected(true);
+
+        }
+
+
     
     return (
         <div className="w-full max-w-sm bg-white rounded-3xl p-6 border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex flex-col justify-between font-sans">
@@ -37,8 +48,12 @@ const LanguageCard = ({lanCard} : LanCardType) => {
                 <span className="text-amber-400 text-sm">{lanCard.rating}</span> 
               </div>
             </div>
-            <button className="w-full bg-[#080d19] hover:bg-slate-800 text-white font-medium text-sm py-3 rounded-2xl transition-colors duration-200">
-              Add to Stack
+            <button onClick={handleLan}
+                    className="btn w-full bg-[#5d7fcf] hover:bg-slate-800 text-white font-medium text-sm py-3 rounded-2xl transition-colors duration-200"
+                    
+                        disabled={isSelected===true ? true : false}
+                    >
+                        {isSelected ? "Success" : "Add to stack"}
             </button>
           </div>
         </div>

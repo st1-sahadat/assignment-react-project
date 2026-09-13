@@ -21,20 +21,19 @@ Ans:- The useEffect hook is a built-in React tool used to manage side effects in
 Ans:- so that React can identify which items have changed, been added, or been removed.<br>
 6. What is conditional rendering? Show one place you used it (example: the empty stack message).<br>
 Ans:-  show, hide, or change user interface elements based on specific application conditions or states. I am useing this condition, go to LanguageCard.tsx file frist div and scroll down end button.<br>
-  <!-- <div
-      className={`w-full max-w-sm bg-white rounded-3xl p-3 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex flex-col justify-between font-sans ${
-        isSelected ? 'border border-[#0c0c0c]' : 'border border-slate-100'
-      }`}>
-      
-       <button
-          onClick={handleLan}
-          disabled={isSelected}
-          className="w-full font-medium text-sm py-3 rounded-2xl transition-colors duration-200 
-             bg-[#5d7fcf] hover:bg-slate-800 text-white
-             disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed disabled:hover:bg-slate-300"
-        >
-          {isSelected ? "Added to Stack" : "Add to Stack"}          
-        </button> -->
+  <div <br>
+      className={`w-full max-w-sm bg-white rounded-3xl p-3 shadow-<br>[0_4px_20px_rgba(0,0,0,0.03)] flex flex-col justify-between <br>font-sans ${<br>
+        isSelected ? 'border border-[#0c0c0c]' : 'border <br>border-slate-100'<br>
+      }`}><br>      
+       <button<br>
+          onClick={handleLan}<br>
+          disabled={isSelected}<br>
+          className="w-full font-medium text-sm py-3 rounded-2xl vtransition-colors duration-200 <br>
+             bg-[#5d7fcf] hover:bg-slate-800 text-white<br>
+             disabled:bg-slate-300 disabled:text-slate-500 <br>disabled:cursor-not-allowed disabled:hover:bg-slate-300"<br>
+        ><br>
+          {isSelected ? "Added to Stack" : "Add to Stack"}   <br>       
+        </button><br>
         
 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?<br>
 Ans:- Parent to Child: Pass data as props.<br>

@@ -8,11 +8,9 @@ import { toast } from 'react-toastify';
 interface LanguageCartType {
   selectedLan: CardType[];
   setSelectedLan: Dispatch<SetStateAction<CardType[]>>;
-    isSelected: boolean;
-    setIsSelected: Dispatch<SetStateAction<boolean>>;
 }
 
-const LanguageCart = ({ selectedLan, setSelectedLan, isSelected, setIsSelected }: LanguageCartType) => {
+const LanguageCart = ({ selectedLan, setSelectedLan }: LanguageCartType) => {
   console.log(selectedLan);
   
   const handleRemove = (id: string) => {

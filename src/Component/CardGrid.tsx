@@ -10,8 +10,7 @@ interface CardGridType {
 const CardGrid = ({ promise }: CardGridType) => {
 
   const language = use(promise);
-  const [selectedLan, setSelectedLan] = useState<CardType[]>([]);  
-  const [isSelected, setIsSelected] = useState(false);
+  const [selectedLan, setSelectedLan] = useState<CardType[]>([]);
   
   return (
   <div  className=" inset-x-0 mx-auto z-50  w-full max-w-7xl items-center justify-between border-b border-gray-100 bg-white px-6 py-4 shadow-sm">
@@ -26,11 +25,11 @@ const CardGrid = ({ promise }: CardGridType) => {
 
     <div className='mt-8 grid grid-cols-12 gap-6'>
     <div className='col-span-12 rounded-2xl p-6  md:col-span-8'>
-      <AvailableLanguage language = {language} selectedLan ={selectedLan} setSelectedLan = {setSelectedLan} isSelected={isSelected} setIsSelected={setIsSelected}/>
+      <AvailableLanguage language = {language} selectedLan ={selectedLan} setSelectedLan = {setSelectedLan}/>
     </div>
 
     <div className='col-span-12 rounded-2xl p-6  md:col-span-4'>
-      <LanguageCart selectedLan ={selectedLan} setSelectedLan = {setSelectedLan} isSelected={isSelected} setIsSelected={setIsSelected}/>
+      <LanguageCart selectedLan ={selectedLan} setSelectedLan = {setSelectedLan} />
     </div>
     </div>
 </div>
@@ -38,3 +37,4 @@ const CardGrid = ({ promise }: CardGridType) => {
 };
 
 export default CardGrid;
+

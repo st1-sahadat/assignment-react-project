@@ -1,10 +1,10 @@
-Assignment 5:
-My project name :- assignment-react-project
-Description     :- I am programing hero student. This crouse very fantastice but very fast.
-                   very attentive to the course. I don't want to leave any stone unturned in my efforts. the rest in God.
-Technology      :- React, inside(html, tailWind css, javaScript, typeScript, Toast)
-Features        :- Create navbar, banner, json data fatch and excute result. map hook componant 
-                   add. footer add (all requirements fullfil).
+Assignment 5:<br>
+My project name :- assignment-react-project<br>
+Description     :- I am programing hero student. This crouse very <br>fantastice but very fast.<br>
+                   very attentive to the course. I don't want to leave <br>any stone unturned in my efforts. the rest in God.<br>
+Technology      :- React, inside(html, tailWind css, javaScript, <br>typeScript, Toast)<br>
+Features        :- Create navbar, banner, json data fatch and excute <br>result. map hook componant <br>
+                   add. footer add (all requirements fullfil).<br>
 
 
 

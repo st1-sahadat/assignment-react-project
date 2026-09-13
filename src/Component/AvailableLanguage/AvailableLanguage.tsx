@@ -1,6 +1,6 @@
 
 import type { Dispatch, SetStateAction } from 'react';
-import type { CardType } from '../Type';
+import type { CardType } from '../../Type';
 import LanguageCard from './LanguageCard';
 
 interface LanguageType{

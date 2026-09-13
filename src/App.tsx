@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import type { CardType } from './Type'
 import Navbar from './Component/Navbar';
 import Banner from './Component/Banner';
-import CardGrid from './Component/CardGrid';
+import CardGrid from './Component/AvailableLanguage/CardGrid';
 import Footer from './Component/Footer';
 import 'react-toastify/dist/ReactToastify.css';
 import { Bounce, ToastContainer } from 'react-toastify';

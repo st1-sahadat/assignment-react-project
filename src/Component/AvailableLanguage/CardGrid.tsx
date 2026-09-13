@@ -1,7 +1,7 @@
 import { use, useState } from 'react';
-import type { CardType } from '../Type';
+import type { CardType } from '../../Type';
 import AvailableLanguage from './AvailableLanguage';
-import LanguageCart from './LanguageCart';
+import LanguageCart from '../LanguageCart';
 
 interface CardGridType {
   promise: Promise<CardType[]>

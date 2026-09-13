@@ -10,10 +10,11 @@ interface CardGridType {
 const CardGrid = ({ promise }: CardGridType) => {
 
   const language = use(promise);
-  const [selectedLan, setSelectedLan] = useState<CardType[]>([]);
+  const [selectedLan, setSelectedLan] = useState<CardType[]>([]);  
+  const [isSelected, setIsSelected] = useState(false);
   
   return (
-  <div  className=" bg-white px-6 py-12 md:px-16 md:py-20 container mx-auto">
+  <div  className=" inset-x-0 mx-auto z-50  w-full max-w-7xl items-center justify-between border-b border-gray-100 bg-white px-6 py-4 shadow-sm">
   <h2 className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">
     Explore the <span className="bg-linear-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">Technologies</span>
   </h2>
@@ -24,12 +25,12 @@ const CardGrid = ({ promise }: CardGridType) => {
 
 
     <div className='mt-8 grid grid-cols-12 gap-6'>
-    <div className='col-span-12 rounded-2xl p-6 shadow-sm md:col-span-8'>
-      <AvailableLanguage language = {language} selectedLan ={selectedLan} setSelectedLan = {setSelectedLan}/>
+    <div className='col-span-12 rounded-2xl p-6  md:col-span-8'>
+      <AvailableLanguage language = {language} selectedLan ={selectedLan} setSelectedLan = {setSelectedLan} isSelected={isSelected} setIsSelected={setIsSelected}/>
     </div>
 
-    <div className='col-span-12 rounded-2xl p-6 shadow-sm md:col-span-4'>
-      <LanguageCart selectedLan ={selectedLan} setSelectedLan = {setSelectedLan}/>
+    <div className='col-span-12 rounded-2xl p-6  md:col-span-4'>
+      <LanguageCart selectedLan ={selectedLan} setSelectedLan = {setSelectedLan} isSelected={isSelected} setIsSelected={setIsSelected}/>
     </div>
     </div>
 </div>

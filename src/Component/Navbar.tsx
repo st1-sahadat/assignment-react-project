@@ -32,19 +32,20 @@ export default function Navbar() {
 
       <div className={`${showNavLinks
         ? 'absolute left-0 right-0 top-full flex flex-col items-stretch gap-2 border-b border-gray-100 bg-white p-4 shadow-lg'
-        : 'hidden'} md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:shadow-none`}>
+        : 'hidden'} sm:block   md:static md:flex md:flex-row md:items-center md:gap-8 md:border-0 md:bg-transparent md:p-0 md:shadow-none`}>
         {navLinks.map((m) => (
           <button
             key={m}
             onClick={() => setActiveLink(m)}
-            className={`rounded-lg px-4 py-2 text-left text-sm font-medium transition-colors duration-200 hover:bg-pink-50 md:px-0 md:hover:bg-transparent
+            className={`rounded-lg px-
+              4 py-2 text-left text-sm font-medium transition-colors duration-200 hover:bg-pink-50 md:px-0 md:hover:bg-transparent
               ${activeLink === m ? 'text-pink-500 font-semibold' : 'text-slate-600 hover:text-slate-900'}
               ${showNavLinks ?"bg-fuchsia-100" : ""}
               `}
           >{m}
           </button>
         ))}
-
+        
       </div>
 
       <div className="flex items-center gap-1 sm:gap-3">

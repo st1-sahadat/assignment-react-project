@@ -16,8 +16,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="relative z-50 mx-auto flex w-full max-w-7xl items-center justify-between border-b border-gray-100 bg-white px-6 py-4 shadow-sm">
-
+    <nav className="fixed inset-x-0 mx-auto z-50 flex w-full max-w-7xl items-center justify-between border-b border-gray-100 bg-white px-6 py-4 shadow-sm">
       <div className="flex items-center gap-2.5">
         <img src={Logo} alt="Logo" className="hidden h-8 w-auto sm:block" />
         <button
@@ -45,6 +44,7 @@ export default function Navbar() {
           >{m}
           </button>
         ))}
+
       </div>
 
       <div className="flex items-center gap-1 sm:gap-3">

@@ -24,17 +24,14 @@ const CardGrid = ({ promise }: CardGridType) => {
 
 
     <div className='mt-8 grid grid-cols-12 gap-6'>
-
     <div className='col-span-12 rounded-2xl p-6 shadow-sm md:col-span-8'>
       <AvailableLanguage language = {language} selectedLan ={selectedLan} setSelectedLan = {setSelectedLan}/>
     </div>
 
     <div className='col-span-12 rounded-2xl p-6 shadow-sm md:col-span-4'>
-      <LanguageCart />
+      <LanguageCart selectedLan ={selectedLan} setSelectedLan = {setSelectedLan}/>
     </div>
-
     </div>
-
 </div>
   );
 };

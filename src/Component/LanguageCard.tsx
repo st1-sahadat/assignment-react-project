@@ -16,6 +16,7 @@ const LanguageCard = ({lanCard, selectedLan, setSelectedLan} : LanCardType) => {
 
         const handleLan = ()=>{
             setIsSelected(true);
+            setSelectedLan([...selectedLan, lanCard])
 
         }
 
@@ -49,7 +50,7 @@ const LanguageCard = ({lanCard, selectedLan, setSelectedLan} : LanCardType) => {
               </div>
             </div>
             <button onClick={handleLan}
-                    className="btn w-full bg-[#5d7fcf] hover:bg-slate-800 text-white font-medium text-sm py-3 rounded-2xl transition-colors duration-200"
+                    className=" btn w-full bg-[#5d7fcf] hover:bg-slate-800 text-white font-medium text-sm py-3 rounded-2xl transition-colors duration-200"
                     
                         disabled={isSelected===true ? true : false}
                     >
